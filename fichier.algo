@@ -1,0 +1,23 @@
+ALGORITHM nb
+VAR
+    nbc,nbv,nbw,i:INTEGER:=0 ;
+    ch:STRING;
+BEGIN
+    write("donner une chaine");read(ch);
+    WHILE (ch[i]<>".") DO
+        IF (ch[i]=" ") THEN
+            nbw:=nbw+1;
+        END_IF
+        IF (ch[i]=["a","e","u","y","i","o"]) THEN
+            nbv:=nbv+1;
+        END_IF
+        i:=i+1;
+        nbc:=i;
+    END_WHILE
+    
+    write("le nombre de mots est :",nbw);
+    write("le nombre de voiel est :",nbv);
+    write("le nombre de caracteres est :",nbc);
+
+    
+END
